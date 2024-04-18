@@ -1,0 +1,230 @@
+[
+    {
+      "abbreviation": "IDLW",
+      "fullName": "International Date Line West",
+      "zoneName": "Pacific/Kwajalein",
+      "gmtOffset": "-12:00"
+    },
+    {
+      "abbreviation": "NT",
+      "fullName": "Niue Time",
+      "zoneName": "Pacific/Niue",
+      "gmtOffset": "-11:00"
+    },
+    {
+      "abbreviation": "CKT",
+      "fullName": "Cook Island Time",
+      "zoneName": "Pacific/Rarotonga",
+      "gmtOffset": "-10:00"
+    },
+    {
+      "abbreviation": "HAST",
+      "fullName": "Hawaii-Aleutian Standard Time",
+      "zoneName": "Pacific/Honolulu",
+      "gmtOffset": "-10:00"
+    },
+    {
+      "abbreviation": "MART",
+      "fullName": "Marquesas Time",
+      "zoneName": "Pacific/Marquesas",
+      "gmtOffset": "-09:30"
+    },
+    {
+      "abbreviation": "AKST",
+      "fullName": "Alaska Standard Time",
+      "zoneName": "America/Anchorage",
+      "gmtOffset": "-09:00"
+    },
+    {
+      "abbreviation": "PST",
+      "fullName": "Pacific Standard Time",
+      "zoneName": "America/Los_Angeles",
+      "gmtOffset": "-08:00"
+    },
+    {
+      "abbreviation": "MST",
+      "fullName": "Mountain Standard Time",
+      "zoneName": "America/Denver",
+      "gmtOffset": "-07:00"
+    },
+    {
+      "abbreviation": "CST",
+      "fullName": "Central Standard Time",
+      "zoneName": "America/Chicago",
+      "gmtOffset": "-06:00"
+    },
+    {
+      "abbreviation": "EST",
+      "fullName": "Eastern Standard Time",
+      "zoneName": "America/New_York",
+      "gmtOffset": "-05:00"
+    },
+    {
+      "abbreviation": "AST",
+      "fullName": "Atlantic Standard Time",
+      "zoneName": "America/Halifax",
+      "gmtOffset": "-04:00"
+    },
+    {
+      "abbreviation": "NFT",
+      "fullName": "Newfoundland Time",
+      "zoneName": "America/St_Johns",
+      "gmtOffset": "-03:30"
+    },
+    {
+      "abbreviation": "WET",
+      "fullName": "Western European Time",
+      "zoneName": "Europe/Lisbon",
+      "gmtOffset": "+00:00"
+    },
+    {
+      "abbreviation": "CET",
+      "fullName": "Central European Time",
+      "zoneName": "Europe/Berlin",
+      "gmtOffset": "+01:00"
+    },
+    {
+      "abbreviation": "EET",
+      "fullName": "Eastern European Time",
+      "zoneName": "Europe/Bucharest",
+      "gmtOffset": "+02:00"
+    },
+    {
+      "abbreviation": "MSK",
+      "fullName": "Moscow Standard Time",
+      "zoneName": "Europe/Moscow",
+      "gmtOffset": "+03:00"
+    },
+    {
+      "abbreviation": "GST",
+      "fullName": "Gulf Standard Time",
+      "zoneName": "Asia/Dubai",
+      "gmtOffset": "+04:00"
+    },
+    {
+      "abbreviation": "PKT",
+      "fullName": "Pakistan Standard Time",
+      "zoneName": "Asia/Karachi",
+      "gmtOffset": "+05:00"
+    },
+    {
+      "abbreviation": "IST",
+      "fullName": "India Standard Time",
+      "zoneName": "Asia/Kolkata",
+      "gmtOffset": "+05:30"
+    },
+    {
+      "abbreviation": "BST",
+      "fullName": "Bangladesh Standard Time",
+      "zoneName": "Asia/Dhaka",
+      "gmtOffset": "+06:00"
+    },
+    {
+      "abbreviation": "NPT",
+      "fullName": "Nepal Time",
+      "zoneName": "Asia/Kathmandu",
+      "gmtOffset": "+05:45"
+    },
+    {
+      "abbreviation": "ALMT",
+      "fullName": "Alma-Ata Time",
+      "zoneName": "Asia/Almaty",
+      "gmtOffset": "+06:00"
+    },
+    {
+      "abbreviation": "MMT",
+      "fullName": "Myanmar Time",
+      "zoneName": "Asia/Yangon",
+      "gmtOffset": "+06:30"
+    },
+    {
+      "abbreviation": "ICT",
+      "fullName": "Indochina Time",
+      "zoneName": "Asia/Bangkok",
+      "gmtOffset": "+07:00"
+    },
+    {
+      "abbreviation": "WIB",
+      "fullName": "Western Indonesian Time",
+      "zoneName": "Asia/Jakarta",
+      "gmtOffset": "+07:00"
+    },
+    {
+      "abbreviation": "HKT",
+      "fullName": "Hong Kong Time",
+      "zoneName": "Asia/Hong_Kong",
+      "gmtOffset": "+08:00"
+    },
+    {
+      "abbreviation": "JST",
+      "fullName": "Japan Standard Time",
+      "zoneName": "Asia/Tokyo",
+      "gmtOffset": "+09:00"
+    },
+    {
+      "abbreviation": "ACST",
+      "fullName": "Australian Central Standard Time",
+      "zoneName": "Australia/Adelaide",
+      "gmtOffset": "+09:30"
+    },
+    {
+      "abbreviation": "AEST",
+      "fullName": "Australian Eastern Standard Time",
+      "zoneName": "Australia/Sydney",
+      "gmtOffset": "+10:00"
+    },
+    {
+      "abbreviation": "VUT",
+      "fullName": "Vanuatu Time",
+      "zoneName": "Pacific/Efate",
+      "gmtOffset": "+11:00"
+    },
+    {
+      "abbreviation": "NZST",
+      "fullName": "New Zealand Standard Time",
+      "zoneName": "Pacific/Auckland",
+      "gmtOffset": "+12:00"
+    },
+    {
+      "abbreviation": "CHAST",
+      "fullName": "Chatham Standard Time",
+      "zoneName": "Pacific/Chatham",
+      "gmtOffset": "+12:45"
+    },
+    {
+      "abbreviation": "LINT",
+      "fullName": "Line Islands Time",
+      "zoneName": "Pacific/Kiritimati",
+      "gmtOffset": "+14:00"
+    },
+    {
+      "abbreviation": "TOT",
+      "fullName": "Tonga Time",
+      "zoneName": "Pacific/Tongatapu",
+      "gmtOffset": "+13:00"
+    },
+    {
+      "abbreviation": "CHADT",
+      "fullName": "Chatham Daylight Time",
+      "zoneName": "Pacific/Chatham",
+      "gmtOffset": "+13:45"
+    },
+    {
+      "abbreviation": "NZDT",
+      "fullName": "New Zealand Daylight Time",
+      "zoneName": "Pacific/Auckland",
+      "gmtOffset": "+13:00"
+    },
+    {
+      "abbreviation": "AEDT",
+      "fullName": "Australian Eastern Daylight Time",
+      "zoneName": "Australia/Sydney",
+      "gmtOffset": "+11:00"
+    },
+    {
+      "abbreviation": "ACST",
+      "fullName": "Australian Central Daylight Saving Time",
+      "zoneName": "Australia/Adelaide",
+      "gmtOffset": "+10:30"
+    }
+  ]
