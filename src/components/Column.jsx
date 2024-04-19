@@ -13,7 +13,7 @@ const Column = ({timeComponents, onCloseTimeComponent}) => {
               key={component.id}
               id={component.id}
               onClose={onCloseTimeComponent}
-              uniqueListPlace={component.uniqueListPlace}
+              listPlace={component.listPlace}
               selectedItem={component.selectedItem}
               
             />

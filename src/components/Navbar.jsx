@@ -11,7 +11,7 @@ import { IoMoon } from 'react-icons/io5';
 import jsonData from "../timeZonesAbb.json";
 
 const Navbar = ({ onReverseOrder, onListItemSelect }) => {
-  const NOMINATIM_BASE_URL = "http://api.openweathermap.org/geo/1.0/direct?";
+  //const NOMINATIM_BASE_URL = "http://api.openweathermap.org/geo/1.0/direct?";
   const TIMEZONEDB_GETTIMEZONE_URL =
     "http://api.timezonedb.com/v2.1/get-time-zone?";
     const [searchText, setSearchText] = useState("");
@@ -50,10 +50,10 @@ const Navbar = ({ onReverseOrder, onListItemSelect }) => {
     if (searchQueryExists) {
       fetchDataFromJSON(searchText);
       
-    } else {
-      callAPI();
+     } //else {
+    //   callAPI();
       
-    }
+    // }
   };
 
   const checkSearchQueryInJSON = (searchQuery) => {
@@ -72,32 +72,9 @@ const Navbar = ({ onReverseOrder, onListItemSelect }) => {
     );
     setListPlace(filteredData);
 
-    // console.log(showPlaces(listPlace));
+    
 
     setSelectedItem(null);
-  };
-  const callAPI = () => {
-    const params = {
-      q: searchText,
-      limit: 5,
-      appid: "cb62ec6ed988011a7aa21606e6993196",
-    };
-    const queryString = new URLSearchParams(params).toString();
-
-    const requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-
-    fetch(`${NOMINATIM_BASE_URL}${queryString}`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        // console.log(result);
-        // console.log("Here is the placeslist");
-        setListPlace(result);
-        // setSelectedItem(null); // Clear selected item
-      })
-      .catch((err) => console.log("err: ", err));
   };
 
   const handleItemClick = async (item) => {
@@ -111,20 +88,14 @@ const Navbar = ({ onReverseOrder, onListItemSelect }) => {
         by: "zone",
         zone: item.zoneName,
       };
-    } else {
-      timeZoneParams = {
-        key: "5O9MC44X06FZ",
-        format: "json",
-        by: "position",
-        lat: item.lat,
-        lng: item.lon,
-      };
-    }
+    } 
+    
   
     try {
-      const timezone = await getTimeZone(timeZoneParams);
+      let timezone = await getTimeZone(timeZoneParams);
+      
       setSelectedItem(timezone); // <-- Set selectedItem directly to timezone
-      console.log("timexone in Navbar:",timezone)
+      console.log("timezone in Navbar:",timezone)
       onListItemSelect(item, timezone);
       console.log("selected item in Navbar:",selectedItem);
     } catch (error) {
@@ -201,17 +172,6 @@ const Navbar = ({ onReverseOrder, onListItemSelect }) => {
     setIsOpen(false); // Close the calendar after selecting a date
   };
 
-  const toggleCalendar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const uniqueListPlace = Array.from(
-    new Set(listPlace.map((item) => item.country))
-  ).map((country) => {
-    return listPlace.find((item) => item.country === country);
-  });
-
-  console.log(uniqueListPlace);
 
   return (
     <nav className="navbar mt-4 bg-gray-200 w-full lg:w-4/5 px-4 py-2 mx-auto">
@@ -236,15 +196,14 @@ const Navbar = ({ onReverseOrder, onListItemSelect }) => {
               className="absolute left-0 mt-8 w-full bg-white border border-gray-300 rounded"
               style={{ zIndex: 9999, top: inputHeight + 10, width: inputRef.current ? inputRef.current.clientWidth : 'auto' }} // Position the list at the bottom
             >
-              {uniqueListPlace.map((place) => (
+              {listPlace.map((place) => (
                 <li
                   key={place.id}
                   onClick={() => handleItemClick(place)}
                   className="p-2 cursor-pointer"
                 >
                   {place.fullName && `${place.fullName}`}
-                  {place.name && ` ${place.name}`}
-                  {place.country && `, ${place.country}`}
+                  
                 </li>
               ))}
             </ul>

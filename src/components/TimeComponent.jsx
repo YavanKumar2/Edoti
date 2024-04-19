@@ -3,11 +3,11 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { RxDragHandleDots1 } from "react-icons/rx";
 
-const TimeComponent = ({ id, onClose, uniqueListPlace, selectedItem }) => {
+const TimeComponent = ({ id, onClose, listPlace, selectedItem }) => {
   const [selectedHour, setSelectedHour] = useState(0);
   const [showTimeList, setShowTimeList] = useState(false);
   const [uniqueListPlaceLocal, setUniqueListPlaceLocal] =
-    useState(uniqueListPlace);
+    useState(listPlace);
   const [selectedItemLocal, setSelectedItemLocal] =useState(selectedItem);
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id });
@@ -16,8 +16,8 @@ const TimeComponent = ({ id, onClose, uniqueListPlace, selectedItem }) => {
     setSelectedHour(parseInt(event.target.value));
   };
   useEffect(() => {
-    setUniqueListPlaceLocal(uniqueListPlace);
-  }, [uniqueListPlace]);
+    setUniqueListPlaceLocal(listPlace);
+  }, [listPlace]);
 
   useEffect(() => {
     setSelectedItemLocal(selectedItem);
@@ -99,9 +99,10 @@ const TimeComponent = ({ id, onClose, uniqueListPlace, selectedItem }) => {
 
   const parts = DateandTime.split(" ");
 
-  const place = parts[0];
+  // const place = parts[0];
 
-  console.log(place);
+  // console.log(place);
+  console.log("parts",parts);
 
   const datePart = parts[1]; // Extract the date part
   const timePart = parts[2]; // Extract the time part
@@ -145,8 +146,9 @@ const TimeComponent = ({ id, onClose, uniqueListPlace, selectedItem }) => {
         <div className="flex justify-between">
           {/* Timezone and Time */}
           <div >
-            <h2 className="text-4xl font-bold">{uniqueListPlace && uniqueListPlace.abbreviation}
-              {uniqueListPlace.name && `${uniqueListPlace.name}`}</h2>
+            <h2 className="text-4xl font-bold">{parts[3] && parts[3]}
+              
+              </h2>
           </div>
           
           <div className="flex w-64 lg:w-2/5 md:w-2/5 sm:w-2/5">
@@ -172,16 +174,12 @@ const TimeComponent = ({ id, onClose, uniqueListPlace, selectedItem }) => {
         <div className="flex justify-between mt-2">
           {/* Full form, GMT, Current Date */}
           <div>
-            <p>{uniqueListPlaceLocal.fullName
-                ? uniqueListPlaceLocal.fullName
-                : place && `${place}`}</p>
+            <p>{parts[0]? parts[0] :"Time Zone not found"}</p>
           </div>
           <div className="flex w-64 lg:w-2/5 md:w-2/5 sm:w-2/5">
             <p className="w-1/2">GMT{" "}
               <span>
-                {uniqueListPlaceLocal.gmtOffset
-                  ? uniqueListPlaceLocal.gmtOffset
-                  : gmt && `${gmt}`}
+                {gmt && `${gmt}`}
               </span></p>
             <p className="w-1/2">{formattedDate}</p>
           </div>
